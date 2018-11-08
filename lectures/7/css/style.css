@@ -1,6 +1,19 @@
 #main {
     /* add CSS here */
+    align:"center";
+    width: 500px;
+    margin: auto;
+    max-width: 500px;
 }
 .pet {
     /* add CSS here */
+    border-radius: 20px;
+    border-style: double;
+    border: thick double;
+    border-color: #fa0305;
+    cursor: none;
+    webkit-box-shadow: 10px 9px 24px -6px rgba(0,0,0,0.75);
+    moz-box-shadow: 10px 9px 24px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 9px 24px -6px rgba(0,0,0,0.75);
+    box-shadow: ivory;
 }
