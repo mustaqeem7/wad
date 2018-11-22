@@ -3,12 +3,16 @@
 //============================================
 
 
-/*var todos = [];
+/*
+var todos = [];
 function add() {
     var task = document.getElementById("task").value;
     todos.push(task);
     document.getElementById('todos').innerText = todos;
-}*/
+}
+*/
+
+// the entered text is being added in the array and being shown on the screen with comma delimited
 
 
 //============================================
@@ -16,7 +20,8 @@ function add() {
 //============================================
 
 
-/*var todos = [];
+/*
+var todos = [];
 function add() {
     var task = document.getElementById('task').value;
     todos.push(task);
@@ -34,15 +39,20 @@ function show() {
         ul.appendChild(li);
     }
     document.getElementById('todos').appendChild(ul);
-}*/
+}
+*/
 
+//the input was pushed into the array and a null was printed at the place of input to free it for further input
+//next a function named show was called in which we created an unordered list dynamically and applied a bootstrap class over it
+//than a for loop was initiated and array was traversed till the end of the array
+//an tem was added everytime and a li tag was added around the data
+//styling was applied on the index and shown on the page
 
 //============================================
 //-----------  STEP - 3 ----------------------
 //============================================
 
 
-/*
 function getTodos() {
     var todos = [];
     var todos_str = localStorage.getItem('todo');
@@ -84,8 +94,12 @@ function show() {
     document.getElementById('todos').appendChild(ul);
 }
 show();
-*/
 
+//the input was pushed into the array and a null was printed at the place of input to free it for further input
+//next a function named show was called in which we created an unordered list dynamically and applied a bootstrap class over it
+//than a for loop was initiated and array was traversed till the end of the array
+//an tem was added everytime and a li tag was added around the data
+//styling was applied on the index and shown on the page
 
 
 //============================================
@@ -93,7 +107,8 @@ show();
 //============================================
 
 
-/*function getTodos() {
+/*
+function getTodos() {
     var todos = [];
     var todos_str = localStorage.getItem('todo');
     if(todos_str !== null)
@@ -162,8 +177,9 @@ function isDone(e) {
     localStorage.setItem('todo',JSON.stringify(todos));
     show();
 }
-show();*/
+show();
 
+*/
 
 
 
@@ -184,4 +200,3 @@ HINT: use text-decoration:line-through; property of CSS
 
 
 */
-
