@@ -15,9 +15,13 @@
         id       : 12,
         fullName : function() {
             return this.firstName + " " + this.lastName;
+        },
+        address : {
+            street: "66",
+            city: "Lahore"
         }
     };
-    document.getElementById("test").innerHTML = person.fullName();
+    document.getElementById("test").innerHTML = person.address.street;
 
     var cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
     var text = "";
@@ -25,7 +29,7 @@
     for (i = 0; i < cars.length; i++) {
         text += cars[i] + "<br>";
     }
-    //document.getElementById("text2").innerHTML = text;
+    /*document.getElementById("text2").innerHTML = text;*/
 
 </script>
 </body>
