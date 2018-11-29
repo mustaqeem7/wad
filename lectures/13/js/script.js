@@ -19,19 +19,67 @@ var questions = [{
         "for",
         "none of the above"],
     correctAnswer : 1
+},{
+    question : "Using _______ statement is how you test for a specific condition",
+    choices : [ "select",
+        "if",
+        "for",
+        "none of the above"],
+    correctAnswer : 1
+},{
+    question : "Using _______ statement is how you test for a specific condition",
+    choices : [ "select",
+        "if",
+        "for",
+        "none of the above"],
+    correctAnswer : 1
 }];
 
 var currentQuestion = 0;
 var correctAnswers = 0;
 var quizOver = false;
 displayCurrentQuestion();
+
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
-    /*Write your code here */
+    if (currentQuestion < 3)
+    {
+        currentQuestion++;
+        displayCurrentQuestion();
+    }
+    else
+    {
+        displayScore();
+        var button = document.getElementById("next-btn");
+        button.innerText = "Reset";
+        button.addEventListener('click',restart);
+    }
 }
-
+function restart()
+{
+    var button = document.getElementById("next-btn");
+    button.innerText = "Next Question";
+    resetQuiz();
+}
 function displayCurrentQuestion() {
-    /*Write your code here */
+    var ques = document.getElementById("question");
+    var answers = document.getElementById("choice-list");
+    ques.innerText = questions[currentQuestion].question;
+    answers.innerHTML = "";
+    for (i = 0 ; i < questions[currentQuestion].choices.length;i++)
+    {
+        answers.innerHTML += '<li><input type="radio" name="choices" value="' + i +'">' + questions[currentQuestion].choices[i]+ '</li>';
+    }
+    var selectedChoice = null;
+    var correctAns = questions[currentQuestion].correctAnswer;
+
+    if(document.querySelector("input[name='choices']:checked") !== null){
+        selectedChoice = document.querySelector('input[name="choices"]:checked').value;
+    }
+    if (selectedChoice === correctAns)
+    {
+        correctAnswers += 1;
+    }
 }
 
 function resetQuiz() {
