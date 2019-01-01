@@ -1,3 +1,10 @@
+<?php
+
+require "C:/xampp/htdocs/wad/pro/server/functions.php";
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,11 +46,7 @@
                     </div>
                     <select class="form-control" id="pro_cat" name="pro_cat">
                         <option>Select Category</option>
-                        <option>Mobile</option>
-                        <option>Laptop</option>
-                        <option>Tablet</option>
-                        <option>Watch</option>
-                        <option>Camera</option>
+                        <?php getInsertCategory() ?>
                     </select>
                 </div>
             </div>
@@ -59,12 +62,7 @@
                     </div>
                     <select class="form-control" id="pro_brand" name="pro_brand">
                         <option>Select Brand</option>
-                        <option>Apple</option>
-                        <option>Samsung</option>
-                        <option>Oppo</option>
-                        <option>Dell</option>
-                        <option>HP</option>
-                        <option>Sony</option>
+                        <?php getInsertBrands() ?>
                     </select>
                 </div>
             </div>
