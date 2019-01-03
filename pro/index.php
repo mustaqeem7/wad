@@ -1,7 +1,10 @@
-<!DOCTYPE html>
 <?php
+
 require "server/functions.php";
+
 ?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -67,7 +70,7 @@ require "server/functions.php";
                     Categories
                 </a>
                 <ul class="collapse show list-unstyled" id="homeSubmenu">
-                    <?php getCats(); ?>
+                    <?php getCategory() ?>
                 </ul>
             </li>
             <li class="active">
@@ -76,7 +79,7 @@ require "server/functions.php";
                     Brands
                 </a>
                 <ul class="collapse show list-unstyled" id="pageSubmenu">
-                    <?php getBrands(); ?>
+                    <?php getBrands() ?>
                 </ul>
             </li>
             <li>
@@ -105,12 +108,12 @@ require "server/functions.php";
 
 </div>
 <footer class="container-fluid">
-        <div class="row">
-            <div class="col text-center">
-               &copy; 2019 by Muhammad Ali Makhdoom
-            </div>
+    <div class="row">
+        <div class="col text-center">
+            &copy; 2019 by Muhammad Ali Makhdoom
         </div>
-    </footer>
+    </div>
+</footer>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.bundle.js"></script>
 </body>
