@@ -97,7 +97,6 @@ require "server/functions.php";
         </ul>
     </nav>
     <article id="content" class="container-fluid bg-white">
-
         <div id ="mainBody" class="row">
                 <?php getPro(); ?>
         </div>
@@ -118,9 +117,7 @@ require "server/functions.php";
 <script>
     function UpdateResults(x)
     {
-        if (x.length > 0)
-        {
-            var xmlhttp = new XMLHttpRequest();
+        var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("mainBody").innerHTML = this.responseText;
@@ -128,7 +125,7 @@ require "server/functions.php";
             };
             xmlhttp.open("GET", "check_keywords.php?e=" + x, true);
             xmlhttp.send();
-        }
+
     }
 
 </script>
